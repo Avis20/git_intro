@@ -1,0 +1,15 @@
+
+name: Проверка кода
+run-name: ${{ github.actor }} проверка кода
+on: [push]
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/checkout@v4
+        with:
+          python-version: 3.10.6
